@@ -4,8 +4,10 @@ from PIL import Image
 from streamlit_drawable_canvas import st_canvas
 import numpy as np
 
-model = load_model('model.keras')
-
+try:
+    model = load_model('model.keras')
+except:
+    st.print("model failed to load, try re-running the application")
 st.title("CNN number predictor")
 
 canvas_result = st_canvas(
