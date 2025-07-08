@@ -27,3 +27,4 @@ if canvas_result.image_data is not None:
     if st.button('Predict'):
         pred = model.predict(img_arr)
         st.success(f"Prediction : {np.argmax(pred)}")
+        st.bar_chart(pred)
