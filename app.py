@@ -7,7 +7,7 @@ import numpy as np
 try:
     model = load_model('model.keras')
 except:
-    st.print("model failed to load, try re-running the application")
+    st.write("model failed to load, try re-running the application")
 st.title("CNN number predictor")
 
 canvas_result = st_canvas(
